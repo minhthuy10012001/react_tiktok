@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Home(props) {
     return (
-        <div>
+        <div style={{height:2000}}>
             Home Page
         </div>
     );

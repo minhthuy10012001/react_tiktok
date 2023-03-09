@@ -1,8 +1,6 @@
 // import Header from "../../components/Layout/DefaultLayout/Header";
 
-import Header from "components/Layout/components/Header";
-
-
+import Header from "layouts/components/Header/Header";
 
 function Upload() {
     return ( 

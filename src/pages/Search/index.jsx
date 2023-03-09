@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from 'components/Layout/components/Header';
+import Header from 'layouts/components/Header/Header';
+
 
 
 function Search(props) {
