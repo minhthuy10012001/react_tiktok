@@ -1,4 +1,50 @@
 .wrapper{
-    width: 356px;
+    width: 35%;
     padding: 20px 0 26px 0px;
+    position: relative;
+    height: 100vh;
+    overflow: scroll;
+}
+.sidebar{
+
+    display: -webkit-box;
+    display:flex;
+    -webkit-box-orient:vertical;
+    flex-direction:column;
+    height: 100%;
+    
+    // .sidebar .scrollbar-sidebar{
+    //     overflow-y:scroll;
+    //     min-height:0;
+    //     -webkit-box-flex:1;
+    //     flex:1;
+
+    //     width: 6px;
+    //     height: 100%;
+    //     border-radius: 3px;
+    //     background: rgba(22, 24, 35, .06);
+    
+    // }
+}
+// .sidebar .scrollbar-sidebar{
+
+// }
+.css-l5ex3n-DivScrollBar {
+    height: 56.6546px;
+    position: absolute;
+    padding: 0 4px;
+    top: 0;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    // opacity: 0;
+    right: 0;
+    transform-origin: right top;
+    // position: fixed;
+    // transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1) scale(4.90728) translateZ(-3.90728px) translateZ(-2px);
+}
+.scrollbar-sidebar{
+    width: 6px;
+    height: 56px;
+    border-radius: 3px;
+    background: rgba(22, 24, 35, .06);
 }

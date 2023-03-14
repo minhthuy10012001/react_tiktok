@@ -23,5 +23,5 @@ const publicRoutes = [
 // ];
 
 // export {publicRoutes, privateRoutes}
-console.log(publicRoutes);
+// console.log(publicRoutes);
 export {publicRoutes}

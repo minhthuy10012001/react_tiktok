@@ -133,7 +133,6 @@ function Header() {
                                 src = 'https://i.pinimg.com/564x/ac/9c/7c/ac9c7c22d93be9c24e8fadb63bd64b50.jpg' 
                                 className={cx('user-avatar')} 
                                 alt="Duong Thi Minh Thuy" 
-                                // fallback='https://i.pinimg.com/564x/ea/d8/a4/ead8a475e5d3e14e542a27eb724a4e4e.jpg'
                             />
                         ) : (
                         

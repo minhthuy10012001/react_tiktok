@@ -1,52 +1,83 @@
-.wrapper{
-    border-top: 1px solid #e3e3e4;
-    padding: 16px 0;
+.wrapper {
+  border-top: 1px solid #e3e3e4;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
 }
-.label{
-    padding: 0 0px;
-    font-size: 14px;
-    margin-bottom: 8px;
-    line-height: 20px;
-    color: #a4a4a5;
+.label {
+  padding: 0 0px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 20px;
+  color: #a4a4a5;
 }
-.account-item{
-    display: flex;
-    padding: 8px 0 8px 0;
-}
-.avatar{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.item-info{
-    flex: 1;
-    margin-left: 12px;
-}
-.nickname{
-    margin-top: -2px;
-    line-height: 22px;
-    cursor: pointer;
+.account-item {
+  display: flex;
+  padding: 8px 0 8px 0;
+  position: relative;
+  padding: 8px 8px;
+  transition: background-color ease-in-out 200ms;
 
-    strong{
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: #161823;
-    }
+  &:hover .item-user {
+    display: block;
+  }
+
+  &:hover {
+    background: rgba(22, 24, 35, 0.03);
+  }
 }
-.name{
-    font-size: 1.2rem;
-    opacity: #161823bf;
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.item-info {
+  flex: 1;
+  margin-left: 12px;
+}
+.nickname {
+  margin-top: -2px;
+  line-height: 22px;
+  cursor: pointer;
+
+  strong {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #161823;
+  }
+}
+.name {
+  font-size: 1.2rem;
+  opacity: #161823bf;
 }
 .check {
-    margin-left: 6px;
-    font-size: 1.4rem;
-    color: #20d5ec;
+  margin-left: 6px;
+  font-size: 1.4rem;
+  color: #20d5ec;
 }
-.see-more{
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #fe2c55;
-    padding: 8px 0;
-    cursor: pointer;
+.see-more, .see-less {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fe2c55;
+  padding: 8px 0;
+  cursor: pointer;
+  background: none;
+  text-align: left;
+  margin-left: -2%;
+}
+
+.item-user {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+  border-radius: 8px;
+  top: 85%;
+  left: -5%;
+}
+.preview{
+    margin-left: -3%;
 }

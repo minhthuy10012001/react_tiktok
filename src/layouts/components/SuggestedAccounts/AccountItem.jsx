@@ -1,60 +1,42 @@
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import PropTypes from 'prop-types';
-import { Wrapper as PopperWrapper } from 'components/Popper';
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Wrapper as PopperWrapper } from "components/Popper";
+import Image from "components/Image/Image";
 
-import styles from '../SuggestedAccounts/SuggestedAccounts.module.scss';
-import classNames from 'classnames/bind';
-import Tippy from '@tippyjs/react/headless';
-import AccountPreview from './AccountPreview';
-import { useState } from 'react';
+import styles from "../SuggestedAccounts/SuggestedAccounts.module.scss";
+import classNames from "classnames/bind";
+import Tippy from "@tippyjs/react/headless";
+import AccountPreview from "./AccountPreview";
+import UserDt from "Data/DataUser/UserDt";
 
 const cx = classNames.bind(styles);
 
 function AccountItem() {
-
-    const renderPreview = (props) => {
-        return (
-            <div className={cx('preview')} tabIndex = "-1" {...props}>
-                <PopperWrapper>
-                    <AccountPreview/>
-                </PopperWrapper>
+  return (
+    <div>
+      <div className={cx("preview")}>
+        {UserDt.map((item, index) => (
+          <div className={cx("account-item")} key={index}>
+            <Image className={cx("avatar")} src={item.avatar} alt="" />
+            <div className={cx("item-info")}>
+              <h4 className={cx("nickname")}>
+                <strong>{item.nickname}</strong>
+                {item.tick && (
+                  <FontAwesomeIcon
+                    className={cx("check")}
+                    icon={faCheckCircle}
+                  />
+                )}
+              </h4>
+              <p className={cx("name")}>{item.full_name}</p>
             </div>
-        )
-    }
-
-    // const [showAccount, setShowAccount] = useState(true);
-
-
-    return ( 
-        <div>
-            <Tippy
-                interactive
-                delay={[200, 0]}
-                offset={[-40, 0]}
-                placement = "bottom"
-             render={renderPreview}
-            >
-            <div className={cx('account-item')}>
-                <img 
-                    className={cx('avatar')}
-                    src="https://i.pinimg.com/564x/f6/85/df/f685dfb67ec349d7b5b7c48cbeb81303.jpg" alt="" />
-            <div className={cx('item-info')}>
-                <h4 className={cx('nickname')}>
-                    <strong>duongthiminhthuy</strong>
-                    <FontAwesomeIcon className={cx('check')} icon = {faCheckCircle}/>
-                </h4>
-                <p className={cx('name')}>Duong Thi Minh Thuy</p>
+            <div className={cx('item-user')}>
+              <AccountPreview user={item} />
             </div>
-        
-        </div>
-        </Tippy>
-        </div>
-     );
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
-
-AccountItem.propType = {
-
-}
-
 export default AccountItem;

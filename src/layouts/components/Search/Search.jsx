@@ -39,6 +39,7 @@ function Search() {
         }
         fetchApi();
 
+        
     }, [debouncedValue]);
 
     const handleClear = () => {
@@ -63,6 +64,7 @@ function Search() {
     // }
 
     return (
+        
         <div>
         <HeadlessTippy
             interactive
@@ -75,6 +77,7 @@ function Search() {
                     {searchResult.map((result) => (
                         <AccountItem key = {result.id} data={result}/>
                     ))}
+                    
                 </PopperWrapper>
             </div>                      
             )}
